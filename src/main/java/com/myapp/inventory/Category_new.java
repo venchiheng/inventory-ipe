@@ -4,6 +4,7 @@
  */
 package com.myapp.inventory;
 
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author ACER
@@ -15,6 +16,7 @@ public class Category_new extends javax.swing.JFrame {
      */
     public Category_new() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -144,17 +146,38 @@ public class Category_new extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
+        txtname.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtnameActionPerformed(evt);
+            }
+        });
+
         btnsave.setBackground(new java.awt.Color(255, 153, 255));
         btnsave.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnsave.setText("Save");
+        btnsave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsaveActionPerformed(evt);
+            }
+        });
 
         btnclose.setBackground(new java.awt.Color(255, 255, 102));
         btnclose.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnclose.setText("Close");
+        btnclose.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncloseActionPerformed(evt);
+            }
+        });
 
         btndelete.setBackground(new java.awt.Color(255, 102, 102));
         btndelete.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btndelete.setText("Delete");
+        btndelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btndeleteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -202,6 +225,32 @@ public class Category_new extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txtnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtnameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtnameActionPerformed
+    
+    private int rowNumber =1;
+    private void btnsaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsaveActionPerformed
+        // TODO add your handling code here:
+        DefaultTableModel model = (DefaultTableModel)tableproduct.getModel();
+        model.addRow(new Object[]{rowNumber,txtname.getText()});
+        rowNumber++;
+    }//GEN-LAST:event_btnsaveActionPerformed
+
+    private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = tableproduct.getSelectedRow();
+        if (selectedRow != -1) {
+        DefaultTableModel model = (DefaultTableModel) tableproduct.getModel();
+        model.removeRow(selectedRow);
+        }
+    }//GEN-LAST:event_btndeleteActionPerformed
+
+    private void btncloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncloseActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_btncloseActionPerformed
 
     /**
      * @param args the command line arguments
