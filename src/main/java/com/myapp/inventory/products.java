@@ -185,7 +185,7 @@ public class products extends javax.swing.JFrame {
                 deleteActionPerformed(evt);
             }
         });
-        getContentPane().add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 780, -1, -1));
+        getContentPane().add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 730, -1, -1));
 
         update.setBackground(new java.awt.Color(51, 153, 255));
         update.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -195,7 +195,7 @@ public class products extends javax.swing.JFrame {
                 updateActionPerformed(evt);
             }
         });
-        getContentPane().add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 720, -1, -1));
+        getContentPane().add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 730, -1, -1));
 
         save.setBackground(new java.awt.Color(51, 153, 255));
         save.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -205,7 +205,7 @@ public class products extends javax.swing.JFrame {
                 saveActionPerformed(evt);
             }
         });
-        getContentPane().add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 720, -1, -1));
+        getContentPane().add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 730, 80, -1));
 
         delete1.setBackground(new java.awt.Color(51, 153, 255));
         delete1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -215,7 +215,7 @@ public class products extends javax.swing.JFrame {
                 delete1ActionPerformed(evt);
             }
         });
-        getContentPane().add(delete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 720, -1, -1));
+        getContentPane().add(delete1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 730, 80, -1));
         getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 510, 240, 30));
         getContentPane().add(jDateChooser2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 370, 240, 30));
         getContentPane().add(jDateChooser3, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 440, 240, 30));
