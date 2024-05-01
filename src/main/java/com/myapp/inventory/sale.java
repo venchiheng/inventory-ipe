@@ -42,6 +42,7 @@ public class sale extends javax.swing.JFrame {
         closeBtn = new javax.swing.JButton();
         quantity = new javax.swing.JSpinner();
         choiceProduct = new javax.swing.JComboBox<>();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -88,8 +89,9 @@ public class sale extends javax.swing.JFrame {
         jPanel1.add(soldDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 190, 190, 40));
 
         jLabel1.setFont(new java.awt.Font("Corbel", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Sales Report");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 20, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 20, -1, 40));
 
         jLabel2.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         jLabel2.setText("Product:");
@@ -139,6 +141,21 @@ public class sale extends javax.swing.JFrame {
 
         choiceProduct.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanel1.add(choiceProduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 190, 40));
+
+        jPanel3.setBackground(new java.awt.Color(255, 153, 153));
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 190, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 10, 190, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -230,6 +247,7 @@ private double price;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner quantity;
     private javax.swing.JButton saveBtn;
