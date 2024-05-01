@@ -65,9 +65,9 @@
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="207" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="btndelete" min="-2" pref="84" max="-2" attributes="0"/>
-                                      <Component id="btnadd" min="-2" pref="84" max="-2" attributes="0"/>
-                                      <Component id="btnmodify" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <Component id="delete" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <Component id="add" min="-2" pref="84" max="-2" attributes="0"/>
+                                      <Component id="modify" alignment="0" min="-2" pref="84" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -111,11 +111,11 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="price" min="-2" pref="37" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                  <Component id="btnadd" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="add" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnmodify" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="modify" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btndelete" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="delete" min="-2" pref="35" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
@@ -207,7 +207,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JTable" name="tablestocklist">
+                <Component class="javax.swing.JTable" name="stockList">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                       <Table columnCount="6" rowCount="0">
@@ -299,7 +299,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pNameActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnadd">
+        <Component class="javax.swing.JButton" name="add">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -318,10 +318,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnaddActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="btnmodify">
+        <Component class="javax.swing.JButton" name="modify">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -340,7 +340,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btndelete">
+        <Component class="javax.swing.JButton" name="delete">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -359,7 +359,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btndeleteActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="pID">

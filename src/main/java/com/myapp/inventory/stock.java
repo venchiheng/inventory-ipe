@@ -2,8 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.myapp.inventory;
-
+package stocks;
 
 import javax.swing.table.DefaultTableModel;
 
@@ -34,15 +33,15 @@ public class stock extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tablestocklist = new javax.swing.JTable();
+        stockList = new javax.swing.JTable();
         Jpanel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         pid = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         pName = new javax.swing.JTextField();
-        btnadd = new javax.swing.JButton();
-        btnmodify = new javax.swing.JButton();
-        btndelete = new javax.swing.JButton();
+        add = new javax.swing.JButton();
+        modify = new javax.swing.JButton();
+        delete = new javax.swing.JButton();
         pID = new javax.swing.JTextField();
         price = new javax.swing.JTextField();
 
@@ -64,7 +63,7 @@ public class stock extends javax.swing.JFrame {
         jLabel5.setText("Stock List");
         jLabel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(204, 204, 255), new java.awt.Color(204, 204, 255)));
 
-        tablestocklist.setModel(new javax.swing.table.DefaultTableModel(
+        stockList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -80,8 +79,8 @@ public class stock extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tablestocklist.setPreferredSize(new java.awt.Dimension(720, 0));
-        jScrollPane1.setViewportView(tablestocklist);
+        stockList.setPreferredSize(new java.awt.Dimension(720, 0));
+        jScrollPane1.setViewportView(stockList);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -125,28 +124,28 @@ public class stock extends javax.swing.JFrame {
             }
         });
 
-        btnadd.setBackground(new java.awt.Color(204, 204, 204));
-        btnadd.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnadd.setText("Add");
-        btnadd.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(51, 102, 255), new java.awt.Color(51, 102, 255)));
-        btnadd.addActionListener(new java.awt.event.ActionListener() {
+        add.setBackground(new java.awt.Color(204, 204, 204));
+        add.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        add.setText("Add");
+        add.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(51, 102, 255), new java.awt.Color(51, 102, 255)));
+        add.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnaddActionPerformed(evt);
+                addActionPerformed(evt);
             }
         });
 
-        btnmodify.setBackground(new java.awt.Color(204, 204, 204));
-        btnmodify.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnmodify.setText("Modify");
-        btnmodify.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(51, 102, 255), new java.awt.Color(51, 102, 255)));
+        modify.setBackground(new java.awt.Color(204, 204, 204));
+        modify.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        modify.setText("Modify");
+        modify.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(51, 102, 255), new java.awt.Color(51, 102, 255)));
 
-        btndelete.setBackground(new java.awt.Color(204, 204, 204));
-        btndelete.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btndelete.setText("Delete");
-        btndelete.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(51, 102, 255), new java.awt.Color(51, 102, 255)));
-        btndelete.addActionListener(new java.awt.event.ActionListener() {
+        delete.setBackground(new java.awt.Color(204, 204, 204));
+        delete.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        delete.setText("Delete");
+        delete.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(51, 102, 255), new java.awt.Color(51, 102, 255)));
+        delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btndeleteActionPerformed(evt);
+                deleteActionPerformed(evt);
             }
         });
 
@@ -185,9 +184,9 @@ public class stock extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(207, 207, 207)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btndelete, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnadd, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnmodify, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(modify, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(114, 114, 114)
                                 .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -220,11 +219,11 @@ public class stock extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(price, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(54, 54, 54)
-                .addComponent(btnadd, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(add, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnmodify, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(modify, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btndelete, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(delete, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(132, 132, 132))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
@@ -247,16 +246,16 @@ public class stock extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pNameActionPerformed
 
-    private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
+    private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btndeleteActionPerformed
+    }//GEN-LAST:event_deleteActionPerformed
 
-    private void btnaddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnaddActionPerformed
+    private void addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addActionPerformed
         // TODO add your handling code here:
-          DefaultTableModel model = (DefaultTableModel)tablestocklist.getModel();
+          DefaultTableModel model = (DefaultTableModel)stockList.getModel();
         model.addRow(new Object[]{rowNumber,pID.getText(),pid.getText(),pName.getText()});
         rowNumber++;
-    }//GEN-LAST:event_btnaddActionPerformed
+    }//GEN-LAST:event_addActionPerformed
 
     private void pIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pIDActionPerformed
         // TODO add your handling code here:
@@ -303,9 +302,8 @@ public class stock extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Jpanel2;
-    private javax.swing.JButton btnadd;
-    private javax.swing.JButton btndelete;
-    private javax.swing.JButton btnmodify;
+    private javax.swing.JButton add;
+    private javax.swing.JButton delete;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -313,10 +311,11 @@ public class stock extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton modify;
     private javax.swing.JTextField pID;
     private javax.swing.JTextField pName;
     private javax.swing.JTextField pid;
     private javax.swing.JTextField price;
-    private javax.swing.JTable tablestocklist;
+    private javax.swing.JTable stockList;
     // End of variables declaration//GEN-END:variables
 }
