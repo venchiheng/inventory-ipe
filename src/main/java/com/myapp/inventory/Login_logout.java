@@ -104,6 +104,11 @@ public class Login_logout extends javax.swing.JFrame {
 
         jexit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jexit.setText("Exit");
+        jexit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jexitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -189,6 +194,12 @@ public class Login_logout extends javax.swing.JFrame {
 
     private void jShow_PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jShow_PasswordActionPerformed
         // TODO add your handling code here:
+        if (jShow_Password.isSelected()){
+            jPassword.setEchoChar((char)0);
+        }
+        else {
+            jPassword.setEchoChar('*');
+        }
     }//GEN-LAST:event_jShow_PasswordActionPerformed
 
     private void jloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jloginActionPerformed
@@ -204,11 +215,19 @@ public class Login_logout extends javax.swing.JFrame {
         }
         else if(jPassword.getText().equals("")){
             JOptionPane.showInputDialog(null, "Please fill out password");
+        }else if(jUsername.getText().contains("Sivhour")&& jPassword.getText().contains("12345678")){
+            JOptionPane.showMessageDialog(null, "Login Successful");
         }
+        
         else{
             JOptionPane.showInputDialog(null, "Wrong username or password!!!", "Message", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jloginActionPerformed
+
+    private void jexitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jexitActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jexitActionPerformed
 
     /**
      * @param args the command line arguments
