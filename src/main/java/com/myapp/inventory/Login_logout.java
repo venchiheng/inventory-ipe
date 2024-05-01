@@ -4,6 +4,8 @@
  */
 package com.myapp.inventory;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author USER
@@ -29,16 +31,16 @@ public class Login_logout extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jusername = new javax.swing.JTextField();
+        jUsername = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jemail = new javax.swing.JTextField();
+        jEmail = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jtelephone = new javax.swing.JTextField();
+        jTelephone = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jpassword = new javax.swing.JTextField();
-        jshow_password = new javax.swing.JCheckBox();
+        jShow_Password = new javax.swing.JCheckBox();
         jlogin = new javax.swing.JButton();
         jexit = new javax.swing.JButton();
+        jPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(750, 400));
@@ -61,45 +63,44 @@ public class Login_logout extends javax.swing.JFrame {
 
         jLabel2.setText("Username");
 
-        jusername.addActionListener(new java.awt.event.ActionListener() {
+        jUsername.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jusernameActionPerformed(evt);
+                jUsernameActionPerformed(evt);
             }
         });
 
         jLabel3.setText("Email");
 
-        jemail.addActionListener(new java.awt.event.ActionListener() {
+        jEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jemailActionPerformed(evt);
+                jEmailActionPerformed(evt);
             }
         });
 
         jLabel4.setText("Telephone");
 
-        jtelephone.addActionListener(new java.awt.event.ActionListener() {
+        jTelephone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtelephoneActionPerformed(evt);
+                jTelephoneActionPerformed(evt);
             }
         });
 
         jLabel5.setText("Password");
 
-        jpassword.addActionListener(new java.awt.event.ActionListener() {
+        jShow_Password.setText("Show Password");
+        jShow_Password.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jpasswordActionPerformed(evt);
-            }
-        });
-
-        jshow_password.setText("Show Password");
-        jshow_password.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jshow_passwordActionPerformed(evt);
+                jShow_PasswordActionPerformed(evt);
             }
         });
 
         jlogin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jlogin.setText("Login");
+        jlogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jloginActionPerformed(evt);
+            }
+        });
 
         jexit.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jexit.setText("Exit");
@@ -118,26 +119,26 @@ public class Login_logout extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(79, 79, 79)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jshow_password)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jemail, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel2)
                                     .addGap(62, 62, 62)
-                                    .addComponent(jusername, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jLabel4)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jtelephone, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(jLabel5)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jpassword, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jlogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jexit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(jexit, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel4)
+                                        .addComponent(jLabel5))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(jTelephone, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                                        .addComponent(jPassword))))
+                            .addComponent(jShow_Password))
                         .addContainerGap(64, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -149,21 +150,21 @@ public class Login_logout extends javax.swing.JFrame {
                 .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jusername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jemail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jtelephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTelephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jpassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jshow_password)
+                .addComponent(jShow_Password)
                 .addGap(33, 33, 33)
                 .addComponent(jlogin)
                 .addGap(18, 18, 18)
@@ -174,25 +175,40 @@ public class Login_logout extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jusernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jusernameActionPerformed
+    private void jUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUsernameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jusernameActionPerformed
+    }//GEN-LAST:event_jUsernameActionPerformed
 
-    private void jemailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jemailActionPerformed
+    private void jEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jEmailActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jemailActionPerformed
+    }//GEN-LAST:event_jEmailActionPerformed
 
-    private void jtelephoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtelephoneActionPerformed
+    private void jTelephoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTelephoneActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtelephoneActionPerformed
+    }//GEN-LAST:event_jTelephoneActionPerformed
 
-    private void jpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpasswordActionPerformed
+    private void jShow_PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jShow_PasswordActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jpasswordActionPerformed
+    }//GEN-LAST:event_jShow_PasswordActionPerformed
 
-    private void jshow_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jshow_passwordActionPerformed
+    private void jloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jloginActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jshow_passwordActionPerformed
+        if (jUsername.getText().equals("")){
+            JOptionPane.showInputDialog(null, "Please fill out username");
+        }
+        else if(jEmail.getText().equals("")){
+            JOptionPane.showInputDialog(null, "Please fill out email");
+        }
+        else if(jTelephone.getText().equals("")){
+            JOptionPane.showInputDialog(null, "Please fill out telephone");
+        }
+        else if(jPassword.getText().equals("")){
+            JOptionPane.showInputDialog(null, "Please fill out password");
+        }
+        else{
+            JOptionPane.showInputDialog(null, "Wrong username or password!!!", "Message", JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jloginActionPerformed
 
     /**
      * @param args the command line arguments
@@ -230,18 +246,18 @@ public class Login_logout extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField jEmail;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jemail;
+    private javax.swing.JPasswordField jPassword;
+    private javax.swing.JCheckBox jShow_Password;
+    private javax.swing.JTextField jTelephone;
+    private javax.swing.JTextField jUsername;
     private javax.swing.JButton jexit;
     private javax.swing.JButton jlogin;
-    private javax.swing.JTextField jpassword;
-    private javax.swing.JCheckBox jshow_password;
-    private javax.swing.JTextField jtelephone;
-    private javax.swing.JTextField jusername;
     // End of variables declaration//GEN-END:variables
 }
