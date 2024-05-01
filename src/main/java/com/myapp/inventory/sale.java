@@ -45,7 +45,6 @@ public class sale extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(750, 400));
         setResizable(false);
         setSize(new java.awt.Dimension(750, 400));
 
@@ -57,10 +56,7 @@ public class sale extends javax.swing.JFrame {
 
         tableSale.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "No.", "Product ", "Product ID", "Import Date", "Sold Date", "Unit Price", "Quantity", "Total"
@@ -167,9 +163,9 @@ private double price;
         // TODO add your handling code here:
         price = unit * (int) quantity.getValue();
         DefaultTableModel model = (DefaultTableModel)tableSale.getModel();
-        model.addRow(new Object[]{rowNumber,(String)choiceProduct.getSelectedItem(),pid,date,
+        int newRow = model.getRowCount() + 1;
+        model.addRow(new Object[]{newRow,(String)choiceProduct.getSelectedItem(),pid,date,
                                   soldDate.getDate(),unit,quantity.getValue(),price});
-        rowNumber++;
     }//GEN-LAST:event_saveBtnActionPerformed
 
     private void closeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeBtnActionPerformed
@@ -183,6 +179,9 @@ private double price;
         if (selectedRow != -1) {
         DefaultTableModel model = (DefaultTableModel) tableSale.getModel();
         model.removeRow(selectedRow);
+        for (int i = selectedRow; i < model.getRowCount(); i++) {
+            model.setValueAt(i + 1, i, 0);
+        }
         }
     }//GEN-LAST:event_deleteBtnActionPerformed
 
