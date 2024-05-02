@@ -77,37 +77,44 @@ public class Product extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 255), null));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setText("Product Name");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, -1, -1));
+        jLabel3.setFont(new java.awt.Font("Corbel", 0, 16)); // NOI18N
+        jLabel3.setText("Product Name:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 40, -1, -1));
 
-        jLabel4.setText("Product ID");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 110, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Corbel", 0, 16)); // NOI18N
+        jLabel4.setText("Product ID:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 82, -1, -1));
 
-        jLabel5.setText("Quantity");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, -1, -1));
+        jLabel5.setFont(new java.awt.Font("Corbel", 0, 16)); // NOI18N
+        jLabel5.setText("Quantity:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 125, -1, -1));
 
-        jLabel6.setText("Import Date");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 190, -1, -1));
+        jLabel6.setFont(new java.awt.Font("Corbel", 0, 16)); // NOI18N
+        jLabel6.setText("Import Date:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 167, -1, -1));
 
-        jLabel7.setText("Manufacturing Date");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 230, -1, -1));
+        jLabel7.setFont(new java.awt.Font("Corbel", 0, 16)); // NOI18N
+        jLabel7.setText("Manufacturing Date:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, -1, -1));
 
-        jLabel8.setText("Expired Date");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 270, -1, -1));
+        jLabel8.setFont(new java.awt.Font("Corbel", 0, 16)); // NOI18N
+        jLabel8.setText("Expired Date:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 253, -1, -1));
 
-        jLabel9.setText("Import From");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 310, -1, -1));
+        jLabel9.setFont(new java.awt.Font("Corbel", 0, 16)); // NOI18N
+        jLabel9.setText("Import From:");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 295, -1, -1));
 
-        jLabel10.setText("Price");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 350, -1, -1));
+        jLabel10.setFont(new java.awt.Font("Corbel", 0, 16)); // NOI18N
+        jLabel10.setText("Price:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 340, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(204, 204, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 204));
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Corbel", 1, 18)); // NOI18N
         jLabel2.setText("Product list");
-        jLabel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
 
         productList.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -129,53 +136,56 @@ public class Product extends javax.swing.JFrame {
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 456, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(202, 202, 202)
+                .addGap(178, 178, 178)
                 .addComponent(jLabel2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 307, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 350));
 
         jLabel12.setBackground(new java.awt.Color(204, 204, 255));
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jLabel12.setText("Insert Product");
-        jLabel12.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(153, 153, 153), new java.awt.Color(153, 153, 153)));
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 40, -1, -1));
+        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel12.setText("Please insert product information");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, -1, -1));
 
-        delete.setBackground(new java.awt.Color(51, 153, 255));
+        delete.setBackground(new java.awt.Color(0, 102, 255));
+        delete.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        delete.setForeground(new java.awt.Color(255, 255, 255));
         delete.setText("Delete");
-        delete.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(51, 153, 255), new java.awt.Color(51, 153, 255)));
         delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deleteActionPerformed(evt);
             }
         });
-        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, 60, -1));
+        jPanel1.add(delete, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 360, -1, -1));
 
         close.setBackground(new java.awt.Color(204, 204, 204));
+        close.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
         close.setText("Close");
-        close.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(204, 204, 204), new java.awt.Color(204, 204, 204)));
         close.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 closeActionPerformed(evt);
             }
         });
-        jPanel1.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 60, -1));
+        jPanel1.add(close, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 360, 70, -1));
 
+        impFrom.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         impFrom.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda", "Argentina", "Armenia", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bhutan", "Bolivia", "Bosnia and Herzegovina", "Botswana", "Brazil", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Central African Republic", "Chad", "Chile", "China", "Colombia", "Comoros", "Congo, Democratic Republic of the", "Congo, Republic of the", "Costa Rica", "Cote d'Ivoire", "Croatia", "Cuba", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "East Timor (Timor-Leste)", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Fiji", "Finland", "France", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Greece", "Grenada", "Guatemala", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Honduras", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Israel", "Italy", "Jamaica", "Japan", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea, North", "Korea, South", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Morocco", "Mozambique", "Myanmar (Burma)", "Namibia", "Nauru", "Nepal", "Netherlands", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Macedonia (formerly Macedonia)", "Norway", "Oman", "Pakistan", "Palau", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Qatar", "Romania", "Russia", "Rwanda", "Saint Kitts and Nevis", "Saint Lucia", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "Spain", "Sri Lanka", "Sudan", "Sudan, South", "Suriname", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Togo", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Yemen", "Zambia", "Zimbabwe" }));
-        jPanel1.add(impFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 170, 20));
+        jPanel1.add(impFrom, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 311, 170, 27));
 
-        save.setBackground(new java.awt.Color(51, 153, 255));
+        save.setBackground(new java.awt.Color(0, 102, 255));
+        save.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        save.setForeground(new java.awt.Color(255, 255, 255));
         save.setText("Save");
-        save.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(51, 153, 255), new java.awt.Color(51, 153, 255)));
         save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveActionPerformed(evt);
@@ -183,59 +193,63 @@ public class Product extends javax.swing.JFrame {
         });
         jPanel1.add(save, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 60, -1));
 
-        update.setBackground(new java.awt.Color(51, 153, 255));
+        update.setBackground(new java.awt.Color(0, 102, 255));
+        update.setFont(new java.awt.Font("Corbel", 1, 14)); // NOI18N
+        update.setForeground(new java.awt.Color(255, 255, 255));
         update.setText("Update");
-        update.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(51, 153, 255), new java.awt.Color(51, 153, 255)));
         update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateActionPerformed(evt);
             }
         });
-        jPanel1.add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 60, -1));
+        jPanel1.add(update, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 80, -1));
 
         pname.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pnameActionPerformed(evt);
             }
         });
-        jPanel1.add(pname, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 170, 20));
+        jPanel1.add(pname, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 55, 170, 27));
 
         pid.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 pidActionPerformed(evt);
             }
         });
-        jPanel1.add(pid, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 130, 170, 20));
+        jPanel1.add(pid, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 97, 170, 27));
 
         price.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 priceActionPerformed(evt);
             }
         });
-        jPanel1.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 370, 170, 20));
-        jPanel1.add(expDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 170, 20));
-        jPanel1.add(impDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 170, 20));
-        jPanel1.add(manuDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 250, 170, 20));
+        jPanel1.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 357, 170, 27));
+        jPanel1.add(expDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 269, 170, 27));
+        jPanel1.add(impDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 183, 170, 27));
+        jPanel1.add(manuDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 225, 170, 27));
 
         quantity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 quantityActionPerformed(evt);
             }
         });
-        jPanel1.add(quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 170, 20));
+        jPanel1.add(quantity, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 170, 27));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 400));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-  private int rowNumber = 1;
     private void deleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteActionPerformed
         // TODO add your handling code here:
-             int selectedRow = productList.getSelectedRow();
+        int selectedRow = productList.getSelectedRow();
         if (selectedRow != -1) {
         DefaultTableModel model = (DefaultTableModel) productList.getModel();
         model.removeRow(selectedRow);
+        for (int i = selectedRow; i < model.getRowCount(); i++) {
+            model.setValueAt(i + 1, i, 0);
+        }
         }
         
         
@@ -248,14 +262,13 @@ public class Product extends javax.swing.JFrame {
 
     private void saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveActionPerformed
         // TODO add your handling code here:
-            DefaultTableModel model = (DefaultTableModel)productList.getModel();
-        model.addRow(new Object[]{rowNumber,pname.getText(),pid.getText(),quantity.getText(),
-                                  impDate.getDate(),impDate.getDate(),expDate.getDate(),impFrom.getSelectedItem(),price.getText()});
-        rowNumber++;
+        DefaultTableModel model = (DefaultTableModel)productList.getModel();
+        int newRow = model.getRowCount() + 1;
+        model.addRow(new Object[]{newRow, pname.getText(), pid.getText(), quantity.getText(), impDate.getDate(), manuDate.getDate(), expDate.getDate(), impFrom.getSelectedItem(), price.getText()});
     }//GEN-LAST:event_saveActionPerformed
 
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:    
     }//GEN-LAST:event_updateActionPerformed
 
     private void pnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pnameActionPerformed
